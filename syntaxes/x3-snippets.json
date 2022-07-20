@@ -1,0 +1,178 @@
+{
+  "Documentation": {
+    "prefix": "doc",
+    "body": [
+      "#---------------------------------------------------------------------------------------------------",
+      "#                                  Ottech-Serviços e Tecnologia                                     ",
+      "#---------------------------------------------------------------------------------------------------",
+      "#                                                                                                   ",
+      "#     File         :   ${1|Nome do Arquivo|}                                                        ",
+      "#     Author       :   ${2|Seu Nome|}                                                               ",
+      "#     Date         :   ${3|01-01-1970|}                                                             ",
+      "#     Description  :   ${4|qual a finalidade desse arquivo?|}                                       ",
+      "#     Last Update  :   ${5|1-02-1970|}                                                              ",
+      "#                                                                                                   ",
+      "#---------------------------------------------------------------------------------------------------"
+    ],
+    "description": "YOUR COMPANY NAME HERE"
+  },
+  "ACTION,teste": {
+    "prefix": "action",
+    "body": [
+      "$$ACTION",
+      "  Case ACTION",
+      "    When \"${1|OUVRE|}\"       :   Gosub ${1|OUVRE|}",
+      "  Endcase",
+      "Return",
+      "\n",
+      "$${1}$2",
+      "Return"
+    ],
+    "description": "$ACTION"
+  },
+  "For,for": {
+    "prefix": "For",
+    "body": [
+      "For ${1}",
+      "Next"
+    ],
+    "description": "For"
+  },
+  "If,if": {
+    "prefix": "If",
+    "body": [
+      "If ${1}",
+      "Endif"
+    ],
+    "description": "If"
+  },
+  "Clalev": {
+    "prefix": "clalev",
+    "body": [
+      "If !clalev([${1}]) : Local File ${2} [${1}] : Endif"
+    ],
+    "description": "Abre a Tablea"
+  },
+  "EXEC": {
+    "prefix": "EXEC",
+    "body": [
+      "$$EXEC",
+      " ${1}",
+      "Return"
+    ],
+    "description": "Action EXEC"
+  },
+  "LIENS": {
+    "prefix": "LIENS",
+    "body": [
+      "$$LIENS",
+      " ${1}",
+      "Return"
+    ],
+    "description": "Action LIENS"
+  },
+  "SETBOUT": {
+    "prefix": "SETBOUT",
+    "body": [
+      "$$SETBOUT",
+      " ${1}",
+      "Return"
+    ],
+    "description": "Action SETBOUT"
+  },
+  "RASTRO": {
+    "prefix": "Rastro",
+    "body": [
+      "# Abre o Rastro",
+      " Call OUVRE_TRACE('${1}') From LECFIC",
+      "# Mensagem no Rastro",
+      "Call ECR_TRACE('${2}') From GESECRAN",
+      "#Salto de linha",
+      "Call ECR_TRACE('${3}',0) From GESECRAN",
+      "# Fecha o Rastro",
+      "Call FERME_TRACE From LECFIC",
+      "# Display Trace File for user",
+      "Call LEC_TRACE From LECFIC"
+    ],
+    "description": "Cria Rastro"
+  },
+  "Comentario": {
+    "prefix": "Coment",
+    "body": [
+      "#<--${1|Nome do Des|}--${2|Seu Nome|}--${3|Data|}--${4|Descr|}",
+      "#${1|Nome do Des|}-->"
+    ],
+    "description": "Comentario"
+  },
+  "Funprog": {
+    "prefix": "Funprog",
+    "body": [
+      "Funprog ${1}",
+      "End"
+    ],
+    "description": "Funprog"
+  },
+  "Subprog": {
+    "prefix": "Subprog",
+    "body": [
+      "Subprog ${1}",
+      "End"
+    ],
+    "description": "Subprog"
+  },
+  "Openio": {
+    "prefix": "Openio",
+    "body": [
+      "Openio ${1|Nome do Arquivo|}, 0 Using [${2|Nome da abreviatura|}]",
+      "Iomode adxifs \"\" Using [${2|Nome da abreviatura|}]",
+      "Iomode adxirs chr$(13)+chr$(10) Using [${2|Nome da abreviatura|}]",
+      "Iomode adxium 50 Using [${2|Nome da abreviatura|}]",
+      "# Fecha o Arquivo de leitura ou escrita",
+      "Openio Using [${2|Nome da abreviatura|}]"
+    ],
+    "description": "Openio le e escreve um arquivo"
+  },
+  "Filpath": {
+    "prefix": "Filpath",
+    "body": [
+      "filpath(\"${1|Nome da Pasta|}\",\"\",\"\")"
+    ],
+    "description": "Passa o caminho de uma pasta"
+  },
+  "mid": {
+    "prefix": "mid",
+    "body": [
+      "mid$(${1|string|},${2|começa apartir dessa posição|},${3|quantos caracteres pegos|})"
+    ],
+    "description": "pega a informação do vetor que foi especificado"
+  },
+  "ctrans": {
+    "prefix": "ctrans",
+    "body": [
+      "ctrans(${1|string|},\"${2|caracter que vai ser trocado|}\",\"${3|substituto|}\")"
+    ],
+    "description": "converte o caracter escolhido por outro"
+  },
+  "num$": {
+    "prefix": "num$",
+    "body": [
+      "num$(${1})"
+    ]
+  },
+  "Filter Table": {
+    "prefix": "Filter",
+    "body": [
+      "Filter [${1}]",
+      "Filter [${1}] Where [${1}]",
+      "Read [${1}] First"
+    ]
+  },
+  "Case": {
+    "prefix": "Case",
+    "body": [
+      "Case ${1}",
+      " When ${2}",
+      "Endcase"
+    ]
+  }
+}
