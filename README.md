@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- Create a `Sagex3-Syntax-Highlight-and-Auto-Complete` named folder inside your `~/.vscode/extensions/`;
+- Create a `Sagex3-Syntax-Highlight-and-Auto-Complete` named folder inside your `~/.vscode/extensions/` or `%USERPROFILE%\.vscode\extensions`;
 - Copy all files in yours recent created folder;
 - Reload VS Code and enjoy;
 
