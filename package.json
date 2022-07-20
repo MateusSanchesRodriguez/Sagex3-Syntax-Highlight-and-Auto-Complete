@@ -1,0 +1,57 @@
+{
+	"name": "Sagex3-Syntax-Highlight-and-Auto-Complete",
+	"displayName": "Sage X3",
+	"description": "Syntax Highlight and Auto Complete",
+	"version": "1.0.0",
+	"publisher": "Mateus Sanches",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"X3",
+		"Sage",
+		"Sagex3"
+	],
+	"icon": "logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MateusSanchesRodriguez/Sagex3-Syntax-Highlight-and-Auto-Complete"
+	},
+	"homepage": "https://github.com/MateusSanchesRodriguez/Sagex3-Syntax-Highlight-and-Auto-Complete/master/README.md",
+	"contributes": {
+		"languages": [
+			{
+				"id": "x3",
+				"aliases": [
+					"Sage ERP X3",
+					"4GL X3 Adonix ",
+					"x3"
+				],
+				"extensions": [
+					".src",
+					".trt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "x3",
+				"path": "./syntaxes/x3-snippets.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "x3",
+				"scopeName": "source.src",
+				"path": "./syntaxes/x3.tmLanguage.json"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node test.js"
+	}
+}
