@@ -1,6 +1,8 @@
 # Sage Enterprise Management (Sage X3) (Adonix 4GL) Syntax Highlighting and Auto Complete
 
 > Extension feature for Visual Studio Code
+>
+> <img src= "preview.png">
 
 ## Requirements
 
